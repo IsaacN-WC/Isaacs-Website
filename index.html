@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial scale=1.0"/>
 
     <title>Memes Throughout the Years😎</title>
-    <link rel="stylesheet"href="style.css"/> 
+    <link rel="stylesheet"href="style.css"/>
 
 </head>
 <body>
     <header>
         <h1>Memes Throughout the Years</h1>
-        <h3>By ____</h3>
+        <h3>By Isaac</h3>
     <nav>
         <ul>
              <li><a href="index.html">Home</a></li>
@@ -22,6 +22,76 @@
              <li><a href="creation.html">Creation</a></li>
             </ul>
          </nav>
+      <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Popup background */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.3); /* Softer overlay */
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Popup content */
+    .popup-content {
+      position: relative;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      width: 320px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: fadeIn 0.4s ease;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #666;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    .popup-content h2 {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    .popup-content button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .popup-content button:hover {
+      background: #0056b3;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    </style>    
 
     </header>
 
@@ -42,12 +112,47 @@
             <p>To begin your journey throughout the memes multiverse, visit the <a href="timeline.html">Timeline</a> page or check out the <a href="about.html">About</a> section for more information.</p>
             </div>    
         </section>
-        
+   
+        <div class="popup" id="popupAd">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>Check This Out ✨</h2>
+      <p>Check your typing test speed to prove how great you are! Only the top 1% of the World can score above 60WPM, can you? Feel free to explore the rest of the website after by clicking "X"</p>
+      <button onclick="goToPage()">Learn More</button>
+    </div>
+  </div>
+
+  <script>
+    // Show popup 3 seconds after page loads
+    window.onload = function() {
+      setTimeout(function(){
+        document.getElementById("popupAd").style.display = "flex";
+      }, 3000);
+    };
+
+    // Close popup function
+    function closePopup() {
+      document.getElementById("popupAd").style.display = "none";
+    }
+
+    // Redirect on button click
+    function goToPage() {
+      window.location.href = "typingtest.html"; // Change link
+    }
+
+    // Close popup if user clicks outside the content
+    window.onclick = function(event) {
+      const popup = document.getElementById("popupAd");
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    };
+    </script>    
+       
 
     </main>
     <footer>
-    <p>&copy; 2025 ____. All rights reserved</p>
+    <p>&copy; 2025 Isaacs Website. All rights reserved</p>
     </footer>
 </body>
 </html>
-
