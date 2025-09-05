@@ -1,106 +1,158 @@
-:root {
-    --primary-color: #005587;
-    --accent-dblue: #2E4356;
-    --accent-green: #205C40;
-    --accent-lime: #A4D56E;
-    --accent-blue: #005587;
-    --light-blue: #009CBD;
-    --neutral-tan: #A68263;
-    --light-bg: #94ABF2;
-    --muted-grey: #014023;
-    --dark-brown: #4E3524;
-    --magenta: #994878;
-    --orange: #EF9600;
-    --alert-red: #A72B2A;
-    --text-color: #2C2A29;
-    --prussian-blue: #003153;
-    --seafoam-green :#93E9BE;
-    --predawn: #ffa17f, #00223e **
-  }
+<!DOCTYPE html>
+<html lang="en">
 
-  body{
-    background-image: linear-gradient(45deg, #780206 20%, #061161 70%);
-    color: var(--text-color);
-    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+<head>
 
-  header{
-    background-image: linear-gradient(45deg, #780206 20%, #061161 70%);
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0"/>
 
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    background-image: linear-gradient(45deg, #780206 20%, #061161 70%);
-}
+    <title>Memes Throughout the Years😎</title>
+    <link rel="stylesheet"href="style.css"/>
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+</head>
+<body>
+    <header>
+        <h1>Memes Throughout the Years</h1>
+        <h3>By Isaac</h3>
+    <nav>
+        <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="timeline.html">Timeline</a></li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="creation.html">Creation</a></li>
+            </ul>
+         </nav>
+      <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-nav a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    padding: 1rem;
-    font-weight: bold;
-}
+    /* Popup background */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.3); /* Softer overlay */
+      justify-content: center;
+      align-items: center;
+    }
 
-nav a:hover {
-    background-color: #ff4e50;
-    color: #2C2A29;
-}
+    /* Popup content */
+    .popup-content {
+      position: relative;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      width: 320px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: fadeIn 0.4s ease;
+    }
 
-main {
-    padding: 2rem;
-}
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #666;
+    }
 
+    .close-btn:hover {
+      color: #000;
+    }
 
-footer {
-    background-image: linear-gradient(45deg, #780206 20%, #061161 70%);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+    .popup-content h2 {
+      margin-top: 10px;
+      font-size: 20px;
+    }
 
-.magenta {
-  color: var(--magenta)
-}
+    .popup-content button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
 
-.green{
-  color: var(--muted-grey)
-}
+    .popup-content button:hover {
+      background: #0056b3;
+    }
 
-body{
-  font-size:large
-}
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    </style>    
 
-h3 {
-  font-size: 15px
-}
+    </header>
 
+    <main>
+        <section class = "black">
+            <h2><strong>Welcome</strong></h2>
+            <p>This website guides you through the diverse and complex world of <strong><em>memes</em></strong></div></p>
+        </section>
+        <section class = "black">
+            <h2><strong>What will you learn from this wondeful website?</strong></h2>
+                <li>Understand what memes are</li>
+                <li>Learn what memes where created what year</li>
+                <li>Learn how to create your own memes</li>
+                </div>
+        </section>
+        <section id="alert">
+            <h2><strong>Getting Started</strong></h2>
+            <p>To begin your journey throughout the memes multiverse, visit the <a href="timeline.html">Timeline</a> page or check out the <a href="about.html">About</a> section for more information.</p>
+            </div>    
+        </section>
+   
+        <div class="popup" id="popupAd">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>Check This Out ✨</h2>
+      <p>Check your typing test speed to prove how great you are! Only the top 1% of the World can score above 60WPM, can you? Feel free to explore the rest of the website after by clicking "X"</p>
+      <button onclick="goToPage()">Learn More</button>
+    </div>
+  </div>
 
-.white{
-  color: white
-}
+  <script>
+    // Show popup 3 seconds after page loads
+    window.onload = function() {
+      setTimeout(function(){
+        document.getElementById("popupAd").style.display = "flex";
+      }, 3000);
+    };
 
-.purple{
-  color: #8A4C9A
-}
+    // Close popup function
+    function closePopup() {
+      document.getElementById("popupAd").style.display = "none";
+    }
 
-.prussian-blue{
-  color: var(--prussian-blue)
-}
+    // Redirect on button click
+    function goToPage() {
+      window.location.href = "typingtest.html"; // Change link
+    }
+
+    // Close popup if user clicks outside the content
+    window.onclick = function(event) {
+      const popup = document.getElementById("popupAd");
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    };
+    </script>    
+       
+
+    </main>
+    <footer>
+    <p>&copy; 2025 Isaacs Website. All rights reserved</p>
+    </footer>
+</body>
+</html>
